@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(CPP VERSION 1.0 LANGUAGES CXX)
+project(my_executable_name) # TODO: CHANGE BINARY NAME
 
-set(CMAKE_C_STANDARD 23)
+set(CMAKE_C_STANDARD 26)
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -14,11 +14,27 @@ if(NOT CMAKE_BUILD_TYPE)
     message(STATUS "Setting build type to 'Debug' as none was specified.")
 endif()
 
-set(CMAKE_CXX_FLAGS
-    "-fsanitize=address -fsanitize=undefined -fstack-protector-strong -Wno-unused-result -Wall -Wextra -Werror=uninitialized -Werror=vla -Werror=return-type -Wshadow -Wnull-dereference -Wformat -Wformat-security -Wstrict-overflow -Wstrict-prototypes -Wcast-align -Wredundant-decls -Wpedantic -Werror -Wno-shadow"
+set(CXX_FLAGS
+    -Wall
+    -Wcast-align
+    -Wextra
+    -Wformat
+    -Wformat-security
+    -Wno-shadow
+    -Wno-unused-result
+    -Wnull-dereference
+    -Wredundant-decls
+    -Wreturn-type
+    -Wstrict-overflow
+    -Wuninitialized
+    -Wvla
+    -fstack-protector-strong
+    -fsanitize=address
+    -fsanitize=undefined
 )
 
 file(GLOB SOURCES src/*.cpp)
-add_executable(my_executable_name ${SOURCES}) # <-- CHANGE THIS TOO
+add_executable(my_executable_name ${SOURCES}) # TODO: CHANGE BINARY NAME
 
-target_compile_options(my_executable_name PRIVATE -Wall -Wextra -Wpedantic)
+target_compile_options(my_executable_name PRIVATE ${CXX_FLAGS}) # TODO: CHANGE BINARY NAME
+target_link_options(my_executable_name PRIVATE -fsanitize=address -fsanitize=undefined) # TODO: CHANGE BINARY NAME
