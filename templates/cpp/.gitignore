@@ -1,5 +1,23 @@
-build
+.DS_Store
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+/CPack*
 
-.direnv
-
-.cache
+.cache/
+.direnv/
+/build/
+/docs/
+/result
+a.out
+# TODO: ADD BINARY NAME HERE
+# /ThisApp
