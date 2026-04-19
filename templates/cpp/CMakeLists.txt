@@ -33,7 +33,7 @@ set(CXX_FLAGS
     -fsanitize=undefined
 )
 
-file(GLOB SOURCES src/*.cpp)
+file(GLOB_RECURSE SOURCES src/*.cpp)
 add_executable(my_executable_name ${SOURCES}) # TODO: CHANGE BINARY NAME
 
 target_compile_options(my_executable_name PRIVATE ${CXX_FLAGS}) # TODO: CHANGE BINARY NAME
