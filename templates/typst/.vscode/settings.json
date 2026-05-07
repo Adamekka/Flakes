@@ -1,0 +1,22 @@
+{
+  "ltex.language": "auto",
+  
+  "ltex.enabled": [
+    "typst",
+    "markdown"
+  ],
+  
+  "ltex.dictionary": {
+    "cs-CZ": [
+      "NixOS",
+    ],
+    "en-US": [
+      "NixOS",
+    ]
+  },
+  
+  "typst.format.enable": true,
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
+  }
+}

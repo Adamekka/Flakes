@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    // The premier Typst language server (compiling, preview, formatting)
+    "myriad-dreamin.tinymist",
+    
+    // The grammar and spell checker for English and Czech
+    "valentjn.vscode-ltex",
+    
+    // The AI coding/writing assistant to connect to your Obsidian vault & Ollama
+    "Continue.continue"
+  ]
+}
