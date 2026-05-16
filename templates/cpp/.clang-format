@@ -9,7 +9,7 @@ BinPackParameters: false
 BracedInitializerIndentWidth: 2
 BreakBeforeBinaryOperators: All
 BreakBeforeTernaryOperators: true
-BreakConstructorInitializers: AfterColon
+BreakConstructorInitializers: BeforeComma
 EnumTrailingComma: Insert
 IndentCaseLabels: true
 IndentPPDirectives: BeforeHash
